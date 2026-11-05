@@ -40,7 +40,7 @@
 * [BUGFIX] Querier: Increment `cortex_query_evictions_total` and deregister the victim before cancelling it in the query evictor, fixing double-counted evictions of still-unwinding queries. #7616
 * [BUGFIX] Ring: Ignore READONLY ingesters when assigning tokens so the active series remain balanced. #7946
 * [BUGFIX] Distributor: Fix a `panic: send on closed channel` crash during shutdown when `-distributor.num-push-workers` or `-distributor.num-query-workers` is greater than 0. #7964
-* [BUGFIX] HATracker: Do not report a sample rejected by the HA tracker from a non-elected replica as a failed KV store CAS operation. It was marking the `CAS` span as failed and increasing `memberlist_client_cas_failure_total`, although the sample was being deduplicated as expected. #7913
+* [BUGFIX] HATracker: Do not report a sample rejected by the HA tracker from a non-elected replica as a failed KV store CAS operation. It was marking the `CAS` span as failed and increasing `memberlist_client_cas_failure_total`, although the sample was being deduplicated as expected. #7914
 
 ## 1.22.0 2026-11-19
 
